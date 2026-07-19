@@ -18,7 +18,7 @@ libraryDependencies ++= Seq(
   "commons-configuration" % "commons-configuration" % "1.10",
   "commons-httpclient" % "commons-httpclient" % "3.1",
   "commons-io" % "commons-io" % "2.4",
-  "com.sleepycat" % "je" % "5.0.73",
+  "com.sleepycat" % "je" % "18.3.12",
   "net.sf.jgrapht" % "jgrapht" % "0.8.3",
   "edu.mit" % "jwi" % "2.2.3",
   "org.apache.lucene" % "lucene-core" % "2.9.4",
