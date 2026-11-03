@@ -3,7 +3,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Scala CI
+name: Maven CI
 
 on:
   push:
@@ -26,8 +26,6 @@ jobs:
       with:
         java-version: '8'
         distribution: 'temurin'
-        cache: 'sbt'
-    - name: Setup sbt launcher
-      uses: sbt/setup-sbt@v1
-    - name: Run package
-      run: sbt -Dsbt.launcher.coursier=false package
+        cache: 'maven'
+    - name: Build with Maven Wrapper
+      run: ./mvnw --batch-mode --no-transfer-progress -DskipTests clean verify

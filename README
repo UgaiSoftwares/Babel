@@ -1,4 +1,34 @@
-This is your new Play application
-=================================
+Babel
+=====
 
-This file will be packaged with your application, when using `activator dist`.
+This Play 2.3.10 / Scala 2.11.12 application builds with Maven and JDK 8.
+Set JAVA_HOME to a JDK 8 installation; the legacy compiler does not support
+newer JDKs.
+
+Build on macOS/Linux:
+  ./mvnw -DskipTests clean verify
+
+Build on Windows:
+  mvnw.cmd -DskipTests clean verify
+
+The wrapper downloads Maven 3.9.16 and dependencies on first use. No system
+Maven installation is required. Bundled libraries in lib/ are used directly.
+Maven compiles the app/ sources, Play routes and templates, and test/ sources,
+and packages conf/, config/, resources/, and public/ assets.
+
+Run the application from the repository root:
+  ./mvnw play2:run
+
+BabelNet data and WordNet must be installed separately. Set babelnet.dir and
+jlt.wordnetPrefix in config/jlt.var.properties and the corresponding override
+in config/babelnet.var.properties for your installation;
+review the other config/*.var.properties paths as well. Keep the config/ and
+resources/ directories available when running from the repository root.
+
+Run all tests after configuring these external datasets:
+  ./mvnw clean verify
+
+The existing request and browser tests initialize BabelNet. CI builds and
+compiles the tests with -DskipTests because the external datasets are not
+included in this repository. The legacy browser test also currently fails
+with a JVM VerifyError (Cannot inherit from final class).
