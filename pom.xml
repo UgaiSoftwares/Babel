@@ -24,7 +24,7 @@
         <play2.version>2.3.10</play2.version>
         <scala.version>2.11.12</scala.version>
         <jar.plugin.version>3.5.1</jar.plugin.version>
-        <surefire.plugin.version>2.19.1</surefire.plugin.version>
+        <surefire.plugin.version>3.6.1</surefire.plugin.version>
         <play2.plugin.version>1.0.0-rc5</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0</sbt-compiler.plugin.version>
     </properties>
