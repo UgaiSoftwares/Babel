@@ -21,7 +21,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <play2.version>2.3.10</play2.version>
+        <play2.version>2.5.3</play2.version>
         <scala.version>2.11.12</scala.version>
         <jar.plugin.version>3.5.1</jar.plugin.version>
         <surefire.plugin.version>3.6.1</surefire.plugin.version>
