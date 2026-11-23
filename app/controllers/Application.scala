@@ -13,9 +13,9 @@ import edu.mit.jwi.item.POS;
 import play.api._
 import play.api.mvc._
 
-object Application extends Controller {
+class Application extends Controller {
 
-  var bn = BabelNet.getInstance();
+  private lazy val bn = BabelNet.getInstance()
 
   def index = Action {
     val translations = bn.getTranslations(Language.EN, "word").get(Language.JA);
