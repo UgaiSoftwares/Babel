@@ -1,7 +1,7 @@
 Babel
 =====
 
-This Play 2.3.10 / Scala 2.11.12 application builds with Maven and JDK 8.
+This Play 2.5.3 / Scala 2.11.12 application builds with Maven and JDK 8.
 Set JAVA_HOME to a JDK 8 installation; the legacy compiler does not support
 newer JDKs.
 

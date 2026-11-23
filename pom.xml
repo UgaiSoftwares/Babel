@@ -22,22 +22,13 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <play2.version>2.5.3</play2.version>
+        <play2.routesGenerator>injected</play2.routesGenerator>
         <scala.version>2.11.12</scala.version>
         <jar.plugin.version>3.5.1</jar.plugin.version>
         <surefire.plugin.version>3.6.1</surefire.plugin.version>
         <play2.plugin.version>1.0.0-rc5</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0</sbt-compiler.plugin.version>
     </properties>
-    <!-- Play 2.3 references netty-http-pipelining 1.1.2, unavailable in Central. -->
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>com.typesafe.netty</groupId>
-                <artifactId>netty-http-pipelining</artifactId>
-                <version>1.1.4</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
     <dependencies>
         <dependency>
             <groupId>org.scala-lang</groupId>
@@ -57,12 +48,13 @@
         </dependency>
         <dependency>
             <groupId>com.typesafe.play</groupId>
-            <artifactId>play-jdbc_2.11</artifactId>
+            <artifactId>play-specs2_2.11</artifactId>
             <version>${play2.version}</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.typesafe.play</groupId>
-            <artifactId>anorm_2.11</artifactId>
+            <artifactId>play-jdbc_2.11</artifactId>
             <version>${play2.version}</version>
         </dependency>
         <dependency>
@@ -244,7 +236,7 @@
                             <rules>
                                 <requireJavaVersion>
                                     <version>[1.8,1.9)</version>
-                                    <message>Play 2.3 and its Scala compiler require JDK 8. Set JAVA_HOME to a JDK 8 installation.</message>
+                                    <message>Play 2.5 and its Scala compiler require JDK 8. Set JAVA_HOME to a JDK 8 installation.</message>
                                 </requireJavaVersion>
                             </rules>
                         </configuration>
